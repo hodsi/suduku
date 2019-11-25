@@ -7,7 +7,7 @@
     </head>
     <body>
         <script src="./index.js"></script>
-        <form onsubmit="return checkLogin()">
+        <form onsubmit="return checkLogin(event)" action="./choose_level.html">
             <div>User name: </div> <input class="userName" type="text" name="userName" required/> <br/>
             <div>Password: </div> <input class="password" type="password" name="password" required/> <br/>
             <input type="submit" value="login"/> <br/>

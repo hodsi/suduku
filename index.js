@@ -2,9 +2,11 @@ const AuthonticatedLogins = {
     user17: "1234",
 };
 
-function checkLogin()
+function checkLogin(event)
 {
-    const userName = document.getElementsByClassName("userName")[0].value;
-    const password = document.getElementsByClassName("password")[0].value;
-    return AuthonticatedLogins.hasOwnProperty(userName) && AuthonticatedLogins[userName] === password;
+    const userName = event.target.userName.value;
+    const password = event.target.password.value;
+    if (AuthonticatedLogins[userName] !== password) {
+        event.preventDefault();
+    }
 }
