@@ -6,7 +6,15 @@
         </title>
     </head>
     <body>
+        <link rel="stylesheet" type="text/css" href="./suduku.css"/>
+        <form onsubmit="checkSuduku(event); return false;">
+            <table id="sudukuTable"></table>
+            <input type="submit" value="check if suduku is correct">
+        </form>
+        Game state: <div id="gameState"> not solved</div> <br/>
+        <button onclick="generateBoard();">
+            Generate a new board
+        </button>
         <script src="./suduku.js"></script>
-        <table id="sudukuTable"></table>
     </body>
 </html>

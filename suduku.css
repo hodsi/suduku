@@ -1,0 +1,27 @@
+tr:nth-child(3n) td input {
+    margin-bottom: 4px;
+}
+
+td:nth-child(3n) input {
+    margin-right: 3px;
+}
+
+#gameState {
+    display: inline;
+}
+
+input {
+    text-align: inherit;
+    width: max-content;
+}
+
+td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+table {
+    border-collapse:separate; 
+    border-spacing: 2px 1px;
+}
+  
