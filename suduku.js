@@ -100,7 +100,7 @@ function generateBoard() {
 
 function checkSuduku(event) {
     const tableBoard = [...event.target.firstElementChild.querySelectorAll('input')].map(input => parseInt(input.value));
-    const isSudukuGood = JSON.stringify(window.solvedBoard.flat()) == JSON.stringify(tableBoard);
+    const isSudukuGood = JSON.stringify(window.solvedBoard.flat()) === JSON.stringify(tableBoard);
     const gameState = document.getElementById('gameState');
     if (isSudukuGood) {
         gameState.textContent = 'SOLVED';
