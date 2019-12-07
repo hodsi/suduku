@@ -88,7 +88,7 @@ function generateBoard() {
             input.max = rowSize;
             input.required = true;
             if(coveredBoard[i][j]) {
-                input.value = board[i][j]
+                input.value = board[i][j];
                 input.readOnly = true;
             }
             td.appendChild(input);
