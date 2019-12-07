@@ -1,7 +1,7 @@
 function shuffleArray(array) {
-    let newArray = array.slice();
-    for (let i in newArray) {
-        let randomIndex = array.length - Math.floor(Math.random() * (newArray.length - i)) - 1;
+    const newArray = array.slice();
+    for (const i in newArray) {
+        const randomIndex = array.length - Math.floor(Math.random() * (newArray.length - i)) - 1;
         [newArray[i], newArray[randomIndex]] = [newArray[randomIndex], newArray[i]];
     }
     return newArray;
@@ -20,7 +20,7 @@ function tryCreateBoard(blockSize) {
             const [i0, j0] = [i - i % blockSize, j - j % blockSize];
             const shuffledNumbers = shuffleArray(numbers);
             let isFilled = false;
-            for (let num of shuffledNumbers) {
+            for (const num of shuffledNumbers) {
                 if (
                     board[i].find(value => value === num) === undefined
                     && board.every(row => row[j] !== num)
@@ -60,7 +60,7 @@ function coverBoard(board) {
     const coveredBoard = JSON.parse(JSON.stringify(board));
     const indexes = shuffleArray(Object.keys(coveredBoard.flat()));
     const indexesToCover = indexes.slice(0, Math.floor(indexes.length * 0.01 * levelToCoverPercent[level]));
-    for (i of indexesToCover) {
+    for (const i of indexesToCover) {
         coveredBoard[Math.floor(i / rowSize)][i % rowSize] = '';
     }
     return coveredBoard;
