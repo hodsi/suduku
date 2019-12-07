@@ -1,18 +1,30 @@
-tr:nth-child(3n) td input {
-    margin-bottom: 4px;
+tr:nth-child(3n) {
+    border-bottom: 3px solid black;
 }
 
-td:nth-child(3n) input {
-    margin-right: 3px;
+td:nth-child(3n) {
+    border-right: 3px solid black;
+}
+
+td {
+    border: 1px solid black;
 }
 
 #gameState {
     display: inline;
 }
 
-input {
-    text-align: inherit;
+input[type="number"] {
     width: max-content;
+    font-size: 30px;
+    font-style: oblique;
+    border-width: 0px;
+    border: none;
+}
+
+body div {
+    text-align: center;
+    align-content: center;
 }
 
 td {
@@ -21,7 +33,6 @@ td {
 }
 
 table {
-    border-collapse:separate; 
-    border-spacing: 2px 1px;
+    border-collapse: collapse;
+    border: 3px solid black;
 }
-  
